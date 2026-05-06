@@ -41,21 +41,10 @@
 </head>
 <body>
 <div id="app">
-  <video id="player" autoplay muted playsinline>
-    <source src="video.mp4" type="video/mp4" />
+  <video autoplay muted loop playsinline>
+    <source src="video2.mp4" type="video/mp4" />
   </video>
 </div>
-<script>
-  const player = document.getElementById('player');
-  const videos = ['video.mp4', 'video2.mp4'];
-  let current = 0;
-
-  player.addEventListener('ended', () => {
-    current = (current + 1) % videos.length;
-    player.src = videos[current];
-    player.play();
-  });
-</script>
 <script>
   const DESIGN_W = 1080;
   const DESIGN_H = 1920;
